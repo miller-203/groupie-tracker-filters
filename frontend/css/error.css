@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #282828;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    background: #2E2E2E;
+    border: 2px solid #3c3c3c; 
+    border-radius: 20px;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 150%;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.button-return {
+    display: inline-block;
+    font-size: 18px;
+    background-color: #8800FF;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+}

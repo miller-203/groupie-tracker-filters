@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Artists</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupie Tracker</title>
+    <link rel="icon" type="image/x-icon" href="/frontend/css/pngegg.png">
+    <link rel="stylesheet" href="frontend/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="hero-text">
+        <h1>Groupie-Tracker-Filters</h1>
+        <p>Explore the world of music and connect with your favorite bands and artists.</p>
+    </div>
+
+    <div class="filter-form">
+        <h1>Filter Form:</h1>
+        <div class="filters">
+            <!-- Creation Date Range -->
+            <div class="slider-container">
+                <h2>Creation Date Range</h2>
+                <label for="min-creation-date">Min Creation Date:</label>
+                <input type="range" id="min-creation-date" min="1900" max="2023" value="2000">
+                <span id="min-creation-date-value">2000</span>
+
+                <br>
+
+                <label for="max-creation-date">Max Creation Date:</label>
+                <input type="range" id="max-creation-date" min="1900" max="2023" value="2023">
+                <span id="max-creation-date-value">2023</span>
+            </div>
+
+            <!-- First Album Date Range -->
+            <div class="slider-container">
+                <h2>First Album Date Range</h2>
+                <label for="min-first-album-date">Min First Album Date:</label>
+                <input type="range" id="min-first-album-date" min="1900" max="2023" value="2000">
+                <span id="min-first-album-date-value">2000</span>
+
+                <br>
+
+                <label for="max-first-album-date">Max First Album Date:</label>
+                <input type="range" id="max-first-album-date" min="1900" max="2023" value="2023">
+                <span id="max-first-album-date-value">2023</span>
+            </div>
+
+            <!-- Members Selection -->
+            <div>
+                <h2>Members</h2>
+                <input type="checkbox" name="members" value="1"> 1 Member<br>
+                <input type="checkbox" name="members" value="2"> 2 Members<br>
+                <input type="checkbox" name="members" value="3"> 3 Members<br>
+                <input type="checkbox" name="members" value="4"> 4 Members<br>
+                <input type="checkbox" name="members" value="5"> 5 Members<br>
+                <input type="checkbox" name="members" value="6"> 6 Members<br>
+                <input type="checkbox" name="members" value="7"> 7 Members<br>
+                <input type="checkbox" name="members" value="8"> 8 Members<br>
+            </div>
+
+            <!-- Locations Input -->
+            <div>
+                <h2>Locations</h2>
+                <input class="name" type="text" id="search" placeholder="Enter locations..." />
+            </div>
+        </div>
+        <button class="submit" id="filter-button">Apply Filters</button>
+    </div>
+
+    <div id="container">
+        {{range .}}
+        <div class="artists-cards" id="artists-cards" data-location="{{.Locations}}" data-members="{{.MembersLen}}"
+            data-creation-date="{{.CreationDate}}" data-first-album="{{.FirstAlbum}}">
+            <img class="artist-image" src="{{.Image}}" alt="{{.Name}}" width="100">
+
+            <div class="cards-text">
+                <h2 class="name">{{.Name}}</h2>
+
+                <div class="details">
+                    <p><strong>Creation Date:</strong> {{.CreationDate}}</p>
+                    <p><strong>First Album:</strong> {{.FirstAlbum}}</p>
+                </div>
+
+                <a class="button" href="/artist?id={{.ID}}">More details</a>
+            </div>
+        </div>
+        {{end}}
+    </div>
+    <script src="./frontend/script/script.js"></script>
+</body>
+
+</html>

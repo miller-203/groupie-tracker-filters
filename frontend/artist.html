@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Artist Details</title>
+    <link rel="stylesheet" href="/frontend/css/artist.css">
+    <link rel="icon" type="image/x-icon" href="/frontend/css/pngegg.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="hero-section">
+        <img src="{{.Myartist.Image}}" alt="{{.Myartist.Name}}" width="200">
+        <div class="hero-texts">
+            <h1>{{.Myartist.Name}}</h1>
+            <p><strong>Members:</strong>
+            <ul>
+                {{range .Myartist.Members}}
+                <li>{{.}}</li>
+                {{end}}
+            </ul>
+            </p>
+            <p><strong>First Album:</strong> {{.Myartist.FirstAlbum}}</p>
+            <p><strong>Creation Date:</strong> {{.Myartist.CreationDate}}</p>
+        </div>
+        <div class="dates-locations">
+            <div>
+                <h2>Dates</h2>
+                {{if .MyartistDates.Dates}}
+                <ul>
+                    {{range .MyartistDates.Dates}}
+                    <li>{{.}}</li>
+                    {{end}}
+                </ul>
+                {{else}}
+                <p>No dates found.</p>
+                {{end}}
+            </div>
+            <div class="location_div">
+                <h2>Locations</h2>
+                {{if .MyartistLocations.Locations}}
+                <ul>
+                    {{range .MyartistLocations.Locations}}
+                    <li>{{.}}</li>
+                    {{end}}
+                </ul>
+                {{else}}
+                <p>No locations found.</p>
+                {{end}}
+            </div>
+        </div>
+    </div>
+
+    {{if .MyartistRelations}}
+    <div class="relations">
+        <table class="relations-table">
+            <h2>Relations</h2>
+            <thead>
+                <tr>
+                    <th>Location</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{range $location, $dates := .MyartistRelations.DatesLocations}}
+                {{range $dates}}
+                <tr>
+                    <td>{{ $location }}</td>
+                    <td>{{ . }}</td>
+                </tr>
+                {{end}}
+                {{end}}
+            </tbody>
+        </table>
+
+        {{else}}
+        <p>No relations found.</p>
+        {{end}}
+    </div>
+    <center>
+        <div class="bu">
+            <a class="button-return" href="/">Return to Artists</a>
+        </div>
+    </center>
+
+    <br>
+</body>
+
+</html>

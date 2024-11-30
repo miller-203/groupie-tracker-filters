@@ -1,0 +1,133 @@
+body {
+    background-color: #282828;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+}
+
+.hero-section img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-texts h1 {
+    font-size: 40px;
+    color: aliceblue;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.hero-texts p {
+    color: aliceblue;
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.hero-texts ul {
+    color: aliceblue;
+    list-style: none;
+    padding: 0;
+}
+
+.dates-locations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.dates-locations h2 {
+    color: aliceblue;
+    font-size: 24px;
+}
+
+.dates-locations ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.dates-locations li {
+    color: #b9b9b9;
+}
+
+.relations {
+    text-align: center;
+    color: aliceblue;
+    margin: 30px 0;
+}
+
+.relations-table {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #2b2b2b;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.relations-table h2 {
+    margin-bottom: 10px;
+}
+
+.relations-table th,
+.relations-table td {
+    padding: 10px;
+    border: 1px solid #3c3c3c;
+}
+
+.relations-table th {
+    background-color: #444;
+}
+
+.relations-table td {
+    background-color: #333;
+}
+
+.button-return {
+    display: inline-block;
+    font-size: 18px;
+    background-color: #8800FF;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.bu {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1022px) {
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-texts h1 {
+        font-size: 8vw;
+    }
+
+    .hero-texts p {
+        font-size: 5vw;
+    }
+
+    tbody {
+        font-size: 2vw;
+    }
+
+}

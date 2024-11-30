@@ -1,0 +1,153 @@
+body {
+    background-color: #282828;
+}
+
+.hero-text {
+    font-family: 'Poppins';
+    text-align: center;
+    padding: 20px;
+}
+
+li {
+    list-style: none;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    margin: 10px;
+
+
+}
+
+.hero-text p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    color: rgb(189, 189, 189);
+    margin: 10px;
+
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    gap: 20px;
+
+}
+
+.artists-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 300px;
+    background: #2E2E2E;
+    color: aliceblue;
+    font-family: 'Poppins';
+    border: 1px solid #3c3c3c;
+    border-radius: 20px;
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+
+
+}
+
+.artist-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+
+}
+
+.artists-cards h2 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.artists-cards .details strong {
+    color: rgb(233, 233, 233);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.artists-cards .details {
+    color: rgb(185, 185, 185);
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: 24px;
+
+}
+
+.cards-text {
+    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.button {
+    font-family: 'Poppins';
+    color: rgb(255, 255, 255);
+    background-color: #8800FF;
+    text-decoration: none;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.button a {
+    display: block;
+    background-color: #8800FF;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-grow: 3px;
+    gap: 50px;
+}
+
+.filter-form {
+    border-radius: 20px;
+    border: 4px solid #8800FF;
+    margin-bottom: 10px;
+    padding: 10px;
+    /* border-width: 5px; */
+    background-color: #333333;
+}
+
+
+
+.filter-form button {
+    background-color: #8800FF;
+    padding: 10px;
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.filter-form button:hover {
+    cursor: pointer;
+    background-color: #9318ff;;
+    color: #ffffff;
+}
